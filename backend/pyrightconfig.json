@@ -1,0 +1,17 @@
+{
+    "include": [
+        "."
+    ],
+    "executionEnvironments": [
+        {
+            "root": ".",
+            "extraPaths": [
+                ".",
+                "./Open-AutoGLM-main"
+            ]
+        }
+    ],
+    "pythonVersion": "3.10",
+    "typeCheckingMode": "basic",
+    "reportMissingImports": "warning"
+}

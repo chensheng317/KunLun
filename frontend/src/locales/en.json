@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "workbench": "Workbench",
+    "login": "Login",
+    "register": "Sign Up",
+    "features": "Features",
+    "cases": "Cases",
+    "faq": "FAQ"
+  },
+  "workbench": {
+    "digitalFactory": "Digital Factory",
+    "digitalWorkers": "Digital Workers",
+    "assetLibrary": "Asset Library",
+    "lab": "Lab",
+    "personalCenter": "Profile",
+    "home": "Home",
+    "history": "History",
+    "coreHub": "Core Hub",
+    "credits": "Credits",
+    "recharge": "Top Up Credits",
+    "help": "Help",
+    "notifications": "Notifications",
+    "service": "Support"
+  },
+  "settings": {
+    "account": "Account",
+    "language": "Language",
+    "theme": "Theme",
+    "logout": "Log Out",
+    "login": "Log In",
+    "customerService": "Contact Support",
+    "profile": "Profile",
+    "security": "Security",
+    "orders": "My Orders",
+    "creditRecords": "Credit Records"
+  },
+  "theme": {
+    "dark": "Dark",
+    "darkDesc": "Default theme",
+    "light": "Light",
+    "lightDesc": "Bright & clean",
+    "system": "System",
+    "systemDesc": "Auto adapt"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "tools": "Tools",
+    "orders": "Orders",
+    "credits": "Credits",
+    "announcements": "Announcements",
+    "system": "Settings"
+  },
+  "auth": {
+    "loginTitle": "Sign in to KunLun",
+    "registerTitle": "Create KunLun Account",
+    "username": "Username",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "loginButton": "Sign In",
+    "registerButton": "Sign Up",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "goRegister": "Sign Up Now",
+    "goLogin": "Sign In"
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the plan that fits your team. Upgrade or downgrade anytime.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "yearlySave": "Save 20%",
+    "free": "Free",
+    "starter": "Starter",
+    "pro": "Pro",
+    "enterprise": "Enterprise",
+    "freeStart": "Get Started",
+    "subscribe": "Subscribe",
+    "perMonth": "/mo"
+  },
+  "factory": {
+    "videoExtract": "Video Link Extractor",
+    "viralContent": "Viral Content Creator",
+    "imageGen": "Image Generator",
+    "videoGen": "Video Generator",
+    "ttsSynthesis": "Text-to-Speech",
+    "watermarkRemoval": "Watermark Remover",
+    "digitalHuman": "Digital Avatar",
+    "musicGen": "AI Music",
+    "jsonPrompt": "JSON Prompt Master"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "loading": "Loading...",
+    "noData": "No data",
+    "success": "Success",
+    "error": "Error",
+    "online": "Online"
+  }
+}

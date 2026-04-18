@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "pricing": "料金プラン",
+    "workbench": "ワークベンチ",
+    "login": "ログイン",
+    "register": "新規登録",
+    "features": "機能",
+    "cases": "事例",
+    "faq": "よくある質問"
+  },
+  "workbench": {
+    "digitalFactory": "デジタルファクトリー",
+    "digitalWorkers": "デジタルワーカー",
+    "assetLibrary": "アセットライブラリ",
+    "lab": "ラボ",
+    "personalCenter": "マイページ",
+    "home": "ホーム",
+    "history": "履歴",
+    "coreHub": "コアハブ",
+    "credits": "クレジット",
+    "recharge": "クレジットチャージ",
+    "help": "ヘルプ",
+    "notifications": "通知",
+    "service": "サポート"
+  },
+  "settings": {
+    "account": "アカウント",
+    "language": "言語",
+    "theme": "テーマ",
+    "logout": "ログアウト",
+    "login": "ログイン",
+    "customerService": "サポートに連絡",
+    "profile": "プロフィール",
+    "security": "セキュリティ",
+    "orders": "注文履歴",
+    "creditRecords": "クレジット履歴"
+  },
+  "theme": {
+    "dark": "ダーク",
+    "darkDesc": "デフォルトテーマ",
+    "light": "ライト",
+    "lightDesc": "明るく爽やか",
+    "system": "システムに従う",
+    "systemDesc": "自動適応"
+  },
+  "admin": {
+    "title": "管理パネル",
+    "dashboard": "ダッシュボード",
+    "users": "ユーザー管理",
+    "tools": "ツール管理",
+    "orders": "注文管理",
+    "credits": "クレジット管理",
+    "announcements": "お知らせ管理",
+    "system": "システム設定"
+  },
+  "auth": {
+    "loginTitle": "崑崙ワークショップにログイン",
+    "registerTitle": "崑崙ワークショップに登録",
+    "username": "ユーザー名",
+    "password": "パスワード",
+    "confirmPassword": "パスワード確認",
+    "loginButton": "ログイン",
+    "registerButton": "新規登録",
+    "noAccount": "アカウントをお持ちでない方",
+    "hasAccount": "アカウントをお持ちの方",
+    "goRegister": "新規登録へ",
+    "goLogin": "ログインへ"
+  },
+  "pricing": {
+    "title": "シンプルで透明な料金プラン",
+    "subtitle": "チームに合ったプランをお選びください。いつでも変更可能です。",
+    "monthly": "月額",
+    "yearly": "年額",
+    "yearlySave": "20%お得",
+    "free": "無料プラン",
+    "starter": "スターター",
+    "pro": "プロ",
+    "enterprise": "エンタープライズ",
+    "freeStart": "無料で始める",
+    "subscribe": "今すぐ登録",
+    "perMonth": "/月"
+  },
+  "factory": {
+    "videoExtract": "動画リンク抽出",
+    "viralContent": "バズコンテンツ作成",
+    "imageGen": "画像生成",
+    "videoGen": "動画生成",
+    "ttsSynthesis": "音声合成",
+    "watermarkRemoval": "透かし除去",
+    "digitalHuman": "デジタルアバター",
+    "musicGen": "AI音楽",
+    "jsonPrompt": "JSONプロンプトマスター"
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "delete": "削除",
+    "edit": "編集",
+    "create": "新規作成",
+    "search": "検索",
+    "loading": "読み込み中...",
+    "noData": "データなし",
+    "success": "成功",
+    "error": "エラー",
+    "online": "オンライン"
+  }
+}

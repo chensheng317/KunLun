@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "home": "首页",
+    "pricing": "定价",
+    "workbench": "工作台",
+    "login": "登录",
+    "register": "注册",
+    "features": "功能",
+    "cases": "案例",
+    "faq": "常见问题"
+  },
+  "workbench": {
+    "digitalFactory": "数字工厂",
+    "digitalWorkers": "数字员工",
+    "assetLibrary": "资产库",
+    "lab": "实验室",
+    "personalCenter": "个人中心",
+    "home": "首页",
+    "history": "历史",
+    "coreHub": "核心中枢",
+    "credits": "积分",
+    "recharge": "积分充值",
+    "help": "帮助",
+    "notifications": "通知",
+    "service": "客服"
+  },
+  "settings": {
+    "account": "账户",
+    "language": "语言",
+    "theme": "主题",
+    "logout": "退出登录",
+    "login": "登录",
+    "customerService": "联系客服",
+    "profile": "个人信息",
+    "security": "安全设置",
+    "orders": "我的订单",
+    "creditRecords": "积分记录"
+  },
+  "theme": {
+    "dark": "深色",
+    "darkDesc": "默认主题",
+    "light": "浅色",
+    "lightDesc": "明亮清爽",
+    "system": "跟随系统",
+    "systemDesc": "自动适配"
+  },
+  "admin": {
+    "title": "管理后台",
+    "dashboard": "数据概览",
+    "users": "用户管理",
+    "tools": "工具管理",
+    "orders": "订单管理",
+    "credits": "积分管理",
+    "announcements": "公告管理",
+    "system": "系统管理"
+  },
+  "auth": {
+    "loginTitle": "登录昆仑工坊",
+    "registerTitle": "注册昆仑工坊",
+    "username": "用户名",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "loginButton": "登录",
+    "registerButton": "注册",
+    "noAccount": "还没有账号？",
+    "hasAccount": "已有账号？",
+    "goRegister": "立即注册",
+    "goLogin": "去登录"
+  },
+  "pricing": {
+    "title": "简单透明的定价方案",
+    "subtitle": "选择适合您团队规模的计划，随时升级或降级。",
+    "monthly": "月付",
+    "yearly": "年付",
+    "yearlySave": "省20%",
+    "free": "体验版",
+    "starter": "基础版",
+    "pro": "专业版",
+    "enterprise": "旗舰版",
+    "freeStart": "免费开始",
+    "subscribe": "立即开通",
+    "perMonth": "/月"
+  },
+  "factory": {
+    "videoExtract": "视频链接提取",
+    "viralContent": "爆款拆解&创作",
+    "imageGen": "图片生成",
+    "videoGen": "视频生成",
+    "ttsSynthesis": "语音合成",
+    "watermarkRemoval": "水印/字幕消除",
+    "digitalHuman": "数字人直播形象",
+    "musicGen": "AI营销音乐",
+    "jsonPrompt": "JSON提示词大师"
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "取消",
+    "confirm": "确认",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "新建",
+    "search": "搜索",
+    "loading": "加载中...",
+    "noData": "暂无数据",
+    "success": "操作成功",
+    "error": "操作失败",
+    "online": "在线"
+  }
+}

@@ -1,0 +1,336 @@
+@import "tailwindcss";
+
+/* NOTE: 首页大标题专用字体 — 方正剪纸简体 */
+@font-face {
+  font-family: 'FZJianZhi';
+  src: url('./fonts/方正剪纸简体.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* NOTE: KunLun 昆仑工坊全局主题配置
+ * 基于 配色.md 定义的赛博工业风配色规范
+ * 使用 Tailwind CSS v4 @theme 指令进行主题扩展
+ */
+@theme {
+  /* 基础层级 (Base Layout) */
+  --color-nexus-bg: #161823;
+  --color-nexus-surface: #2D2B38;
+  --color-nexus-surface-alt: #053154;
+
+  /* 品牌与交互高亮 (Brand & Accent) */
+  --color-nexus-primary: #3eede7;
+  --color-nexus-secondary: #5EB8AC;
+
+  /* 文本系统 (Typography) */
+  --color-nexus-text: #E0E6ED;
+  --color-nexus-muted: #7D8A99;
+  --color-nexus-inverse: #161823;
+
+  /* 边框与分割线 (Borders & Dividers) */
+  --color-nexus-border: #3A3F58;
+
+  /* 辉光阴影系统 (Glow System) */
+  --shadow-cyber-glow: 0 0 15px rgba(62, 237, 231, 0.3);
+  --shadow-cyber-glow-hover: 0 0 25px rgba(62, 237, 231, 0.6);
+  --shadow-cyber-glow-intense: 0 0 40px rgba(62, 237, 231, 0.4), 0 0 80px rgba(62, 237, 231, 0.1);
+
+  /* 字体系统 */
+  --font-sans: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-hero: 'FZJianZhi', 'Inter', sans-serif;
+
+  /* 动画定义 */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
+  --animate-slide-up: slide-up 0.6s ease-out forwards;
+  --animate-slide-up-delay: slide-up 0.6s ease-out 0.2s forwards;
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-counter: counter-up 1.5s ease-out forwards;
+}
+
+/* ──────────────────────────────────────────────
+ * 浅色主题覆盖
+ * NOTE: 通过 <html data-theme="light"> 切换
+ * 品牌色加深以保证白底上 WCAG AA 对比度
+ * ────────────────────────────────────────────── */
+[data-theme="light"] {
+  --color-nexus-bg: #F5F7FA;
+  --color-nexus-surface: #FFFFFF;
+  --color-nexus-surface-alt: #EEF2F7;
+
+  --color-nexus-primary: #0D9B9B;
+  --color-nexus-secondary: #3D9B93;
+
+  --color-nexus-text: #1A2332;
+  --color-nexus-muted: #7B8794;
+  --color-nexus-inverse: #FFFFFF;
+
+  --color-nexus-border: #E2E8F0;
+
+  /* NOTE: 浅色模式不使用赛博辉光，改为柔和阴影 */
+  --shadow-cyber-glow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-cyber-glow-hover: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-cyber-glow-intense: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* NOTE: Banner 视频叠加层 — 浅色模式不使用白雾蒙版
+ * 深色模式：使用品牌深色半透明叠加保证文字可读
+ * 浅色模式：极轻度暗色半透明，让视频画面自然呈现 */
+.banner-overlay-vertical {
+  background: linear-gradient(to bottom,
+    rgba(22, 24, 35, 0.70) 0%,
+    rgba(22, 24, 35, 0.40) 50%,
+    rgba(22, 24, 35, 0.80) 100%);
+}
+.banner-overlay-side {
+  background: linear-gradient(to right,
+    rgba(22, 24, 35, 0.60) 0%,
+    transparent 60%);
+}
+.banner-overlay-bottom {
+  background: linear-gradient(to top,
+    var(--color-nexus-bg) 0%,
+    transparent 100%);
+}
+
+[data-theme="light"] .banner-overlay-vertical {
+  background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 0.10) 0%,
+    rgba(0, 0, 0, 0.03) 50%,
+    rgba(0, 0, 0, 0.15) 100%);
+}
+[data-theme="light"] .banner-overlay-side {
+  background: linear-gradient(to right,
+    rgba(0, 0, 0, 0.12) 0%,
+    transparent 60%);
+}
+
+/* 自定义动画关键帧 */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(62, 237, 231, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(62, 237, 231, 0.6); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes counter-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* React Bits: Logo Loop 无限滚动 */
+@keyframes logoLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-logoLoop {
+  animation: logoLoop 30s linear infinite;
+}
+
+.animate-logoLoop:hover {
+  animation-play-state: paused;
+}
+
+/* 瀑布流无限滚动 — 6 列 9:16 竖版卡片
+ * NOTE: 每列重复 3 次卡片，translateY(-33.33%) 滚动掉一组后无缝衔接 */
+@keyframes marqueeUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-33.33%); }
+}
+
+@keyframes marqueeDown {
+  0% { transform: translateY(-33.33%); }
+  100% { transform: translateY(0); }
+}
+
+.animate-marqueeUp {
+  animation: marqueeUp 12s linear infinite;
+}
+
+.animate-marqueeDown {
+  animation: marqueeDown 15s linear infinite;
+}
+
+/* 父容器 hover 时暂停所有列 */
+.animate-marqueeUp:hover,
+.animate-marqueeDown:hover {
+  animation-play-state: paused;
+}
+
+
+/* NOTE: 全局基础样式必须放在 @layer base 中
+ * 否则会覆盖 Tailwind @layer utilities 中的间距类（px-6, mx-auto 等）
+ * 因为不在 @layer 中的 CSS 规则优先级高于 @layer 内的规则
+ */
+@layer base {
+  html {
+    height: 100%;
+    /* NOTE: 不使用 scroll-behavior: smooth — 会与全屏弹性吸附系统冲突
+     * 吸附滚动由 useFullPageSnap 的 requestAnimationFrame 自定义缓动控制 */
+    @apply font-sans;
+  }
+
+  body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--color-nexus-bg);
+    color: var(--color-nexus-text);
+    font-family: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    /* NOTE: 主题切换时背景色平滑过渡 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  #root {
+    height: 100%;
+  }
+
+  /* 自定义选中高亮 */
+  ::selection {
+    background-color: rgba(62, 237, 231, 0.3);
+    color: #E0E6ED;
+  }
+
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-nexus-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-nexus-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-nexus-primary);
+}
+
+/* NOTE: 隐藏滚动条但保留滚动功能 — 用于音色列表等无需显式滚动条的面板 */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* 粒子网格背景 Utility */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(62, 237, 231, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(62, 237, 231, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* 文本渐变效果 */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #3eede7, #5EB8AC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==================== 实验室场景动画 ==================== */
+
+/* 蒸馏液流动 — 从上到下的碧蓝色液体流动效果 */
+@keyframes distill-flow {
+  0% {
+    background-position: 0% 0%;
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    background-position: 0% 200%;
+    opacity: 0.4;
+  }
+}
+
+.animate-distill-flow {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(62, 237, 231, 0.15) 30%,
+    rgba(62, 237, 231, 0.4) 50%,
+    rgba(62, 237, 231, 0.15) 70%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  animation: distill-flow 2.5s ease-in-out infinite;
+}
+
+/* 气泡上浮 — 实验室烧杯中的气泡效果 */
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-20%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* 液体摇晃 — 烧瓶内液面微动 */
+@keyframes liquid-wobble {
+  0%, 100% { transform: translateX(0) skewX(0deg); }
+  25% { transform: translateX(2px) skewX(0.5deg); }
+  75% { transform: translateX(-2px) skewX(-0.5deg); }
+}
+
+.animate-liquid-wobble {
+  animation: liquid-wobble 4s ease-in-out infinite;
+}
+
+/* 实验室分子结构背景 — 六边形蜂巢网格 */
+.bg-hex-pattern {
+  background-image:
+    radial-gradient(circle, rgba(62, 237, 231, 0.04) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* 脉冲发光环 — 蒸馏装置激活态 */
+@keyframes ring-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(62, 237, 231, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(62, 237, 231, 0);
+  }
+}
+
+.animate-ring-pulse {
+  animation: ring-pulse 2s ease-in-out infinite;
+}

@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "home": "首頁",
+    "pricing": "定價",
+    "workbench": "工作台",
+    "login": "登入",
+    "register": "註冊",
+    "features": "功能",
+    "cases": "案例",
+    "faq": "常見問題"
+  },
+  "workbench": {
+    "digitalFactory": "數位工廠",
+    "digitalWorkers": "數位員工",
+    "assetLibrary": "資產庫",
+    "lab": "實驗室",
+    "personalCenter": "個人中心",
+    "home": "首頁",
+    "history": "歷史",
+    "coreHub": "核心中樞",
+    "credits": "積分",
+    "recharge": "積分儲值",
+    "help": "幫助",
+    "notifications": "通知",
+    "service": "客服"
+  },
+  "settings": {
+    "account": "帳戶",
+    "language": "語言",
+    "theme": "主題",
+    "logout": "登出",
+    "login": "登入",
+    "customerService": "聯繫客服",
+    "profile": "個人資訊",
+    "security": "安全設定",
+    "orders": "我的訂單",
+    "creditRecords": "積分記錄"
+  },
+  "theme": {
+    "dark": "深色",
+    "darkDesc": "預設主題",
+    "light": "淺色",
+    "lightDesc": "明亮清爽",
+    "system": "跟隨系統",
+    "systemDesc": "自動適配"
+  },
+  "admin": {
+    "title": "管理後台",
+    "dashboard": "數據總覽",
+    "users": "用戶管理",
+    "tools": "工具管理",
+    "orders": "訂單管理",
+    "credits": "積分管理",
+    "announcements": "公告管理",
+    "system": "系統管理"
+  },
+  "auth": {
+    "loginTitle": "登入崑崙工坊",
+    "registerTitle": "註冊崑崙工坊",
+    "username": "使用者名稱",
+    "password": "密碼",
+    "confirmPassword": "確認密碼",
+    "loginButton": "登入",
+    "registerButton": "註冊",
+    "noAccount": "還沒有帳號？",
+    "hasAccount": "已有帳號？",
+    "goRegister": "立即註冊",
+    "goLogin": "去登入"
+  },
+  "pricing": {
+    "title": "簡單透明的定價方案",
+    "subtitle": "選擇適合您團隊規模的方案，隨時升級或降級。",
+    "monthly": "月付",
+    "yearly": "年付",
+    "yearlySave": "省20%",
+    "free": "體驗版",
+    "starter": "基礎版",
+    "pro": "專業版",
+    "enterprise": "旗艦版",
+    "freeStart": "免費開始",
+    "subscribe": "立即開通",
+    "perMonth": "/月"
+  },
+  "factory": {
+    "videoExtract": "影片連結擷取",
+    "viralContent": "爆款拆解&創作",
+    "imageGen": "圖片生成",
+    "videoGen": "影片生成",
+    "ttsSynthesis": "語音合成",
+    "watermarkRemoval": "浮水印/字幕消除",
+    "digitalHuman": "數位人直播形象",
+    "musicGen": "AI行銷音樂",
+    "jsonPrompt": "JSON提示詞大師"
+  },
+  "common": {
+    "save": "儲存",
+    "cancel": "取消",
+    "confirm": "確認",
+    "delete": "刪除",
+    "edit": "編輯",
+    "create": "新增",
+    "search": "搜尋",
+    "loading": "載入中...",
+    "noData": "暫無資料",
+    "success": "操作成功",
+    "error": "操作失敗",
+    "online": "在線"
+  }
+}
