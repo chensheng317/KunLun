@@ -40,7 +40,7 @@ jobs:
 
       - name: Build
         working-directory: frontend
-        run: npm run build
+        run: npx vite build
         env:
           # NOTE: 生产环境后端 URL，部署后端后替换为实际 URL
           VITE_API_BASE: https://kunlun-backend.onrender.com
