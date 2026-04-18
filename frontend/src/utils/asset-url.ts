@@ -12,7 +12,9 @@
  */
 export function assetUrl(path: string): string {
     const base = import.meta.env.BASE_URL || '/';
+    // NOTE: 确保 base 以 / 结尾，避免 /KunLun + logo.png = /KunLunlogo.png
+    const normalizedBase = base.endsWith('/') ? base : `${base}/`;
     // 移除 path 开头的 /，避免双斜杠
     const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-    return `${base}${cleanPath}`;
+    return `${normalizedBase}${cleanPath}`;
 }

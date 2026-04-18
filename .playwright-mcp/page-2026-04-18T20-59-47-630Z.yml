@@ -1,0 +1,367 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6] [cursor=pointer]:
+        - img "KunLun Logo" [ref=e8]
+        - generic [ref=e9]: KUNLUN 昆仑工坊
+      - generic [ref=e10]:
+        - button "首页" [ref=e11]: 首页
+        - button "核心功能" [ref=e12]: 核心功能
+        - button "第三方生态" [ref=e13]: 第三方生态
+        - button "常见问题" [ref=e14]: 常见问题
+        - button "关于" [ref=e15]: 关于
+        - link "订阅" [ref=e16] [cursor=pointer]:
+          - /url: /KunLun/pricing
+          - text: 订阅
+      - generic [ref=e17]:
+        - link "登录" [ref=e18] [cursor=pointer]:
+          - /url: /KunLun/login
+          - img [ref=e19]
+          - text: 登录
+        - link "注册" [ref=e22] [cursor=pointer]:
+          - /url: /KunLun/register
+          - img [ref=e23]
+          - text: 注册
+  - main [ref=e26]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e35]: 昆仑定乾坤，电商启新程
+        - img [ref=e36]
+      - heading "一人成军 指挥您的AI手机团队" [level=1] [ref=e39]:
+        - text: 一人成军
+        - text: 指挥您的AI手机团队
+      - paragraph [ref=e40]:
+        - generic [ref=e41]: 昆仑工坊：双轮驱动的AI电商自动化平台，专为全球电商精英打造的全域数字中枢。
+      - generic [ref=e44]:
+        - img [ref=e45]
+        - textbox "输入指令，例如：打开微信，帮我回复一下微信的客户们..." [ref=e47]
+        - button "执行" [ref=e48]:
+          - text: 执行
+          - img [ref=e49]
+      - generic [ref=e51]:
+        - generic [ref=e52]: 全自动化
+        - generic [ref=e53]: Phone Agent
+        - generic [ref=e54]: 零门槛
+        - generic [ref=e55]: 无学习成本
+        - generic [ref=e56]: 自然语言驱动
+    - generic [ref=e57]:
+      - generic [ref=e61]:
+        - generic:
+          - generic [ref=e64]:
+            - generic [ref=e65]: 全域自动化
+            - heading "打造AI手机团队" [level=2] [ref=e66]:
+              - generic [ref=e67]: 打造AI手机团队
+            - paragraph [ref=e68]: 基于Open-AutoGLM，自然语言一键指挥数字员工，零门槛搞定电商全流程。
+            - button "了解更多" [ref=e69]:
+              - text: 了解更多
+              - img [ref=e70]
+          - generic [ref=e74]:
+            - generic [ref=e75]: 生产力革命
+            - heading "一站式数字工厂" [level=2] [ref=e76]:
+              - generic [ref=e77]: 一站式数字工厂
+            - paragraph [ref=e78]: 聚合顶尖AI大模型，涵盖最新的AI应用与工作流，高效沉淀企业核心数字资产。
+            - button "立即体验" [ref=e79]:
+              - text: 立即体验
+              - img [ref=e80]
+          - generic [ref=e84]:
+            - generic [ref=e85]: 企业级服务
+            - heading "专属个性化定制" [level=2] [ref=e86]:
+              - generic [ref=e87]: 专属个性化定制
+            - paragraph [ref=e88]: 提供6大定制服务，团队深度定制开发，满足电商高阶本地部署运营需求。
+            - button "查看详情" [ref=e89]:
+              - text: 查看详情
+              - img [ref=e90]
+      - button [ref=e92]:
+        - img [ref=e93]
+      - button [ref=e95]:
+        - img [ref=e96]
+      - generic [ref=e99]: Scroll
+    - generic [ref=e103]:
+      - generic [ref=e105]:
+        - img [ref=e107]
+        - heading "爆款竞品分析" [level=3] [ref=e110]
+        - paragraph [ref=e111]: 深度拆解竞品爆款逻辑，生成多维分析报告。
+      - generic [ref=e113]:
+        - img [ref=e115]
+        - heading "模拟人类活动" [level=3] [ref=e121]
+        - paragraph [ref=e122]: 模拟真人浏览、点击、滑动等行为，智能规避风控检测。
+      - generic [ref=e124]:
+        - img [ref=e126]
+        - heading "短视频数据复盘" [level=3] [ref=e129]
+        - paragraph [ref=e130]: 提取短视频核心数据指标，生成优化建议。
+      - generic [ref=e132]:
+        - img [ref=e134]
+        - heading "私域微信回复" [level=3] [ref=e136]
+        - paragraph [ref=e137]: 根据客户画像与历史语境，生成高情商回复。
+      - generic [ref=e139]:
+        - img [ref=e141]
+        - heading "店铺经营体检" [level=3] [ref=e145]
+        - paragraph [ref=e146]: 全方位扫描店铺健康度，输出风险预警报告。
+      - generic [ref=e148]:
+        - img [ref=e150]
+        - heading "平台内容发布" [level=3] [ref=e156]
+        - paragraph [ref=e157]: 一键分发多平台图文/视频内容，智能排版。
+      - generic [ref=e159]:
+        - generic [ref=e160]: CORE FEATURES
+        - heading "为电商打造的 专业手机矩阵" [level=2] [ref=e162]:
+          - text: 为电商打造的
+          - text: 专业手机矩阵
+        - paragraph [ref=e163]:
+          - text: 打破业务壁垒
+          - text: 重塑人机协作的边界
+      - generic [ref=e165]:
+        - img [ref=e167]
+        - generic [ref=e169]:
+          - heading "自定义口令" [level=3] [ref=e170]
+          - paragraph [ref=e171]: 输入自然语言指令，数字员工将智能理解语义并自动执行。支持任意复杂度的自定义任务编排。
+    - generic [ref=e173]:
+      - generic [ref=e174]:
+        - generic [ref=e175]: SUCCESS STORIES
+        - heading "他们正在用昆仑工坊 改变商业" [level=2] [ref=e177]
+        - paragraph [ref=e178]: 真实案例，真实增长。看看领先企业如何借助数字中枢实现业务腾飞。
+      - generic [ref=e180]:
+        - generic [ref=e183]:
+          - generic [ref=e184]:
+            - img "高效" [ref=e185]
+            - generic [ref=e186]:
+              - generic [ref=e187]: Efficient
+              - generic [ref=e188]: 高效
+          - generic [ref=e189]:
+            - img "高效" [ref=e190]
+            - generic [ref=e191]:
+              - generic [ref=e192]: Efficient
+              - generic [ref=e193]: 高效
+          - generic [ref=e194]:
+            - img "高效" [ref=e195]
+            - generic [ref=e196]:
+              - generic [ref=e197]: Efficient
+              - generic [ref=e198]: 高效
+        - generic [ref=e201]:
+          - generic [ref=e202]:
+            - img "智能" [ref=e203]
+            - generic [ref=e204]:
+              - generic [ref=e205]: Intelligent
+              - generic [ref=e206]: 智能
+          - generic [ref=e207]:
+            - img "智能" [ref=e208]
+            - generic [ref=e209]:
+              - generic [ref=e210]: Intelligent
+              - generic [ref=e211]: 智能
+          - generic [ref=e212]:
+            - img "智能" [ref=e213]
+            - generic [ref=e214]:
+              - generic [ref=e215]: Intelligent
+              - generic [ref=e216]: 智能
+        - generic [ref=e219]:
+          - generic [ref=e220]:
+            - img "创新" [ref=e221]
+            - generic [ref=e222]:
+              - generic [ref=e223]: Innovative
+              - generic [ref=e224]: 创新
+          - generic [ref=e225]:
+            - img "创新" [ref=e226]
+            - generic [ref=e227]:
+              - generic [ref=e228]: Innovative
+              - generic [ref=e229]: 创新
+          - generic [ref=e230]:
+            - img "创新" [ref=e231]
+            - generic [ref=e232]:
+              - generic [ref=e233]: Innovative
+              - generic [ref=e234]: 创新
+        - generic [ref=e237]:
+          - generic [ref=e238]:
+            - img "精准" [ref=e239]
+            - generic [ref=e240]:
+              - generic [ref=e241]: Precise
+              - generic [ref=e242]: 精准
+          - generic [ref=e243]:
+            - img "精准" [ref=e244]
+            - generic [ref=e245]:
+              - generic [ref=e246]: Precise
+              - generic [ref=e247]: 精准
+          - generic [ref=e248]:
+            - img "精准" [ref=e249]
+            - generic [ref=e250]:
+              - generic [ref=e251]: Precise
+              - generic [ref=e252]: 精准
+        - generic [ref=e255]:
+          - generic [ref=e256]:
+            - img "卓越" [ref=e257]
+            - generic [ref=e258]:
+              - generic [ref=e259]: Excellent
+              - generic [ref=e260]: 卓越
+          - generic [ref=e261]:
+            - img "卓越" [ref=e262]
+            - generic [ref=e263]:
+              - generic [ref=e264]: Excellent
+              - generic [ref=e265]: 卓越
+          - generic [ref=e266]:
+            - img "卓越" [ref=e267]
+            - generic [ref=e268]:
+              - generic [ref=e269]: Excellent
+              - generic [ref=e270]: 卓越
+        - generic [ref=e273]:
+          - generic [ref=e274]:
+            - img "极致" [ref=e275]
+            - generic [ref=e276]:
+              - generic [ref=e277]: Ultimate
+              - generic [ref=e278]: 极致
+          - generic [ref=e279]:
+            - img "极致" [ref=e280]
+            - generic [ref=e281]:
+              - generic [ref=e282]: Ultimate
+              - generic [ref=e283]: 极致
+          - generic [ref=e284]:
+            - img "极致" [ref=e285]
+            - generic [ref=e286]:
+              - generic [ref=e287]: Ultimate
+              - generic [ref=e288]: 极致
+    - generic [ref=e293]:
+      - generic [ref=e294]:
+        - generic [ref=e295]: ECOSYSTEM
+        - heading "无缝对接最前沿、最实用的 生态工具" [level=2] [ref=e297]
+        - paragraph [ref=e298]: 一键联通全域电商生态，让你的业务流转不再有断层。
+      - generic [ref=e300]:
+        - generic [ref=e303]: 智谱 AutoGLM
+        - generic [ref=e306]: Coze 智能体
+        - generic [ref=e309]: MiniMax
+        - generic [ref=e312]: Mureka
+        - generic [ref=e315]: 即梦 · 火山引擎
+        - generic [ref=e318]: RunningHub
+        - generic [ref=e321]: ComfyUI
+        - generic [ref=e324]: 抖音
+        - generic [ref=e327]: 小红书
+        - generic [ref=e330]: 快手
+        - generic [ref=e333]: 微信
+        - generic [ref=e336]: 火山引擎 TOS
+        - generic [ref=e339]: Open-AutoGLM
+        - generic [ref=e342]: FFmpeg
+        - generic [ref=e345]: 智谱 AutoGLM
+        - generic [ref=e348]: Coze 智能体
+        - generic [ref=e351]: MiniMax
+        - generic [ref=e354]: Mureka
+        - generic [ref=e357]: 即梦 · 火山引擎
+        - generic [ref=e360]: RunningHub
+        - generic [ref=e363]: ComfyUI
+        - generic [ref=e366]: 抖音
+        - generic [ref=e369]: 小红书
+        - generic [ref=e372]: 快手
+        - generic [ref=e375]: 微信
+        - generic [ref=e378]: 火山引擎 TOS
+        - generic [ref=e381]: Open-AutoGLM
+        - generic [ref=e384]: FFmpeg
+      - paragraph [ref=e385]: 更多第三方平台持续接入中...
+    - generic [ref=e387]:
+      - generic [ref=e388]:
+        - generic [ref=e389]: FAQ
+        - heading "常见问题" [level=2] [ref=e391]
+        - paragraph [ref=e392]: 还有疑问？随时通过工作台帮助文档/联系客服获取帮助。
+      - generic [ref=e394]:
+        - generic [ref=e396] [cursor=pointer]:
+          - generic [ref=e398]: "01"
+          - heading "昆仑工坊适合哪些人群或企业？" [level=3] [ref=e400]
+          - paragraph [ref=e401]: 昆仑工坊面向电商从业者与企业，核心覆盖电商OPC、中小微电商、互联网电商、自媒体电商，同时支持个人卖家、工作室、电商创业者等用户，以低门槛、全流程的AI能力，满足不同规模主体的电商运营需求。
+        - generic [ref=e403] [cursor=pointer]:
+          - generic [ref=e405]: "02"
+          - heading "AI手机团队能做什么？" [level=3] [ref=e407]
+          - paragraph [ref=e408]: AI手机团队是昆仑工坊的核心自动化能力，可通过自然语言交互，自动执行电商全流程任务，包含爆款竞品分析、模拟人类活动、短视频数据复盘、私域微信回复、店铺经营体检、平台内容发布等，支持用户自定义专属指令，实现7×24小时无人值守的自动化运营。
+        - generic [ref=e410] [cursor=pointer]:
+          - generic [ref=e412]: "03"
+          - heading "数据安全如何保障？" [level=3] [ref=e414]
+          - paragraph [ref=e415]: 采用三层架构联防保证数据安全，应用层使用单向哈希、日志脱敏；数据库层采用脱敏视图、字段加密；传输层采用CORS收紧、速率限制。
+        - generic [ref=e417] [cursor=pointer]:
+          - generic [ref=e419]: "04"
+          - heading "平台产品的定价？" [level=3] [ref=e421]
+          - paragraph [ref=e422]: 昆仑工坊采用SaaS订阅+按需增值的模式，同时支持企业定制化，方案包括体验版、基础版、专业版、旗舰版。
+        - generic [ref=e424] [cursor=pointer]:
+          - generic [ref=e426]: "05"
+          - heading "六大定制服务是什么？" [level=3] [ref=e428]
+          - paragraph [ref=e429]: 昆仑工坊为企业用户提供六大核心定制服务，包括内容创作服务、RPA开发服务、工作流搭建服务、智能体开发服务、Phone Agent团队开发服务、基建管理服务。
+    - generic [ref=e430]:
+      - generic [ref=e433]:
+        - generic [ref=e434]: ABOUT US
+        - heading "关于 昆仑工坊" [level=2] [ref=e436]
+        - paragraph [ref=e437]: 昆仑工坊是由227studio团队专为电商行业设计的全域数字中枢。致力于通过从单点工具到全域方案的一站式AI自动化工作台，打造集成化、全自动化、零门槛的电商运营平台。
+        - generic [ref=e438]:
+          - link "开始免费试用" [ref=e439] [cursor=pointer]:
+            - /url: /KunLun/workbench
+            - text: 开始免费试用
+            - img [ref=e440]
+          - link "联系我们" [ref=e442] [cursor=pointer]:
+            - /url: /KunLun
+      - generic [ref=e445]:
+        - generic [ref=e446]:
+          - generic [ref=e447]:
+            - generic [ref=e448]:
+              - img "KunLun" [ref=e450]
+              - generic [ref=e451]: KUNLUN
+            - paragraph [ref=e452]: 一人成军，指挥你的AI手机团队
+            - generic [ref=e453]:
+              - link "GitHub" [ref=e454] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e455]
+              - link "Twitter" [ref=e458] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e459]
+              - link "LinkedIn" [ref=e461] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e462]
+          - generic [ref=e466]:
+            - heading "产品" [level=4] [ref=e467]
+            - list [ref=e468]:
+              - listitem [ref=e469]:
+                - link "核心功能" [ref=e470] [cursor=pointer]:
+                  - /url: "#features"
+              - listitem [ref=e471]:
+                - link "定价策略" [ref=e472] [cursor=pointer]:
+                  - /url: /KunLun/pricing
+              - listitem [ref=e473]:
+                - button "工单支持" [ref=e474]:
+                  - text: 工单支持
+                  - img [ref=e475]
+              - listitem [ref=e478]:
+                - button "专属客服" [ref=e479]:
+                  - text: 专属客服
+                  - img [ref=e480]
+              - listitem [ref=e483]:
+                - button "定制服务" [ref=e484]:
+                  - text: 定制服务
+                  - img [ref=e485]
+          - generic [ref=e488]:
+            - heading "开发者" [level=4] [ref=e489]
+            - list [ref=e490]:
+              - listitem [ref=e491]:
+                - button "API 文档" [ref=e492]:
+                  - text: API 文档
+                  - img [ref=e493]
+              - listitem [ref=e496]:
+                - link "GitHub 仓库" [ref=e497] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e498]:
+                - link "关于我们" [ref=e499] [cursor=pointer]:
+                  - /url: /KunLun
+        - generic [ref=e500]:
+          - paragraph [ref=e501]: © 2026 KunLun Tech. All rights reserved.
+          - generic [ref=e502]:
+            - link "隐私政策" [ref=e503] [cursor=pointer]:
+              - /url: "#"
+            - link "服务条款" [ref=e504] [cursor=pointer]:
+              - /url: "#"
+            - link "Cookie 设置" [ref=e505] [cursor=pointer]:
+              - /url: "#"
+  - navigation "页面导航" [ref=e506]:
+    - button "回到顶部" [ref=e507]:
+      - img [ref=e508]
+      - generic: 回到顶部
+    - button "上一页" [ref=e510]:
+      - img [ref=e511]
+      - generic: 上一页
+    - button "下一页" [ref=e513]:
+      - img [ref=e514]
+      - generic: 下一页
+    - button "回到底部" [ref=e516]:
+      - img [ref=e517]
+      - generic: 回到底部
+    - button "快速开始" [ref=e519]:
+      - img [ref=e520]
+      - generic: 快速开始
