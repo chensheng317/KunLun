@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { assetUrl } from '../../utils/asset-url';
 import {
   LayoutDashboard,
   Users,
@@ -60,22 +61,22 @@ export default function AdminSidebar({
   const role = user?.role as UserRole | undefined;
   const avatarStyle = role === 'super_admin'
     ? 'bg-rose-500/20 text-rose-400' : role === 'admin'
-    ? 'bg-amber-500/20 text-amber-400' : role === 'ultra'
-    ? 'bg-purple-500/20 text-purple-400' : role === 'pro'
-    ? 'bg-blue-500/20 text-blue-400'
-    : 'bg-nexus-surface-alt text-nexus-muted';
+      ? 'bg-amber-500/20 text-amber-400' : role === 'ultra'
+        ? 'bg-purple-500/20 text-purple-400' : role === 'pro'
+          ? 'bg-blue-500/20 text-blue-400'
+          : 'bg-nexus-surface-alt text-nexus-muted';
   const dotColor = role === 'super_admin'
     ? 'bg-rose-400' : role === 'admin'
-    ? 'bg-amber-400' : role === 'ultra'
-    ? 'bg-purple-400' : role === 'pro'
-    ? 'bg-blue-400'
-    : 'bg-nexus-muted';
+      ? 'bg-amber-400' : role === 'ultra'
+        ? 'bg-purple-400' : role === 'pro'
+          ? 'bg-blue-400'
+          : 'bg-nexus-muted';
   const roleTextColor = role === 'super_admin'
     ? 'text-rose-400/70' : role === 'admin'
-    ? 'text-amber-400/70' : role === 'ultra'
-    ? 'text-purple-400/70' : role === 'pro'
-    ? 'text-blue-400/70'
-    : 'text-nexus-muted/70';
+      ? 'text-amber-400/70' : role === 'ultra'
+        ? 'text-purple-400/70' : role === 'pro'
+          ? 'text-blue-400/70'
+          : 'text-nexus-muted/70';
 
   // NOTE: 根据权限过滤导航项 — 系统设置仅超级管理员可见
   const visibleItems = navItems.filter(
@@ -84,20 +85,18 @@ export default function AdminSidebar({
 
   return (
     <aside
-      className={`fixed inset-y-0 left-0 bg-nexus-bg border-r border-nexus-border flex flex-col z-20 transition-all duration-300 ease-in-out ${
-        collapsed ? 'w-[72px]' : 'w-64'
-      }`}
+      className={`fixed inset-y-0 left-0 bg-nexus-bg border-r border-nexus-border flex flex-col z-20 transition-all duration-300 ease-in-out ${collapsed ? 'w-[72px]' : 'w-64'
+        }`}
     >
       {/* Logo 区域 — 管理后台标识 */}
       <div className="h-16 flex items-center px-4 border-b border-nexus-border">
         <Link to="/workbench" className="flex items-center gap-3 group min-w-0">
           <div className="relative w-8 h-8 rounded-lg overflow-hidden shadow-[0_0_12px_rgba(245,158,11,0.3)] group-hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] transition-shadow duration-300 shrink-0">
-            <img src="/logo.png" alt="KunLun Logo" className="w-full h-full object-cover" />
+            <img src={assetUrl('/logo.png')} alt="KunLun Logo" className="w-full h-full object-cover" />
           </div>
           <span
-            className={`text-lg font-bold tracking-wide text-nexus-text whitespace-nowrap transition-all duration-300 ${
-              collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100 w-auto'
-            }`}
+            className={`text-lg font-bold tracking-wide text-nexus-text whitespace-nowrap transition-all duration-300 ${collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100 w-auto'
+              }`}
           >
             管理后台
           </span>
@@ -109,9 +108,8 @@ export default function AdminSidebar({
         {/* 标题 + 折叠按钮 */}
         <div className="flex items-center justify-between px-2 mb-3">
           <span
-            className={`text-[11px] font-semibold text-nexus-muted uppercase tracking-widest whitespace-nowrap transition-all duration-300 ${
-              collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'
-            }`}
+            className={`text-[11px] font-semibold text-nexus-muted uppercase tracking-widest whitespace-nowrap transition-all duration-300 ${collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'
+              }`}
           >
             后台管理
           </span>
@@ -131,13 +129,11 @@ export default function AdminSidebar({
             <div key={item.id} className="relative group/nav">
               <button
                 onClick={() => setActiveTab(item.id)}
-                className={`relative w-full flex items-center ${
-                  collapsed ? 'justify-center px-0' : 'justify-between px-3'
-                } py-2.5 rounded-lg transition-all duration-200 text-sm font-medium cursor-target ${
-                  isActive
+                className={`relative w-full flex items-center ${collapsed ? 'justify-center px-0' : 'justify-between px-3'
+                  } py-2.5 rounded-lg transition-all duration-200 text-sm font-medium cursor-target ${isActive
                     ? 'text-amber-400 bg-nexus-surface border border-amber-500/20 shadow-[inset_0_0_15px_rgba(245,158,11,0.08)]'
                     : 'text-nexus-muted hover:text-nexus-text hover:bg-nexus-surface/50 border border-transparent'
-                }`}
+                  }`}
               >
                 {/* 激活指示条 — 使用管理后台橙色 */}
                 {isActive && (
@@ -155,9 +151,8 @@ export default function AdminSidebar({
                     className={`shrink-0 ${isActive ? 'text-amber-400 drop-shadow-[0_0_5px_rgba(245,158,11,0.5)]' : ''}`}
                   />
                   <span
-                    className={`whitespace-nowrap transition-all duration-300 ${
-                      collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100 w-auto'
-                    }`}
+                    className={`whitespace-nowrap transition-all duration-300 ${collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100 w-auto'
+                      }`}
                   >
                     {item.label}
                   </span>
@@ -180,11 +175,10 @@ export default function AdminSidebar({
       {/* 底部用户面板 */}
       <div className={`border-t border-nexus-border transition-all duration-300 ${collapsed ? 'py-3' : 'p-3'}`}>
         <div
-          className={`flex items-center transition-all duration-300 relative ${
-            collapsed
-              ? 'w-full justify-center py-2'
-              : 'w-full gap-3 p-3 rounded-xl bg-nexus-surface border border-nexus-border'
-          }`}
+          className={`flex items-center transition-all duration-300 relative ${collapsed
+            ? 'w-full justify-center py-2'
+            : 'w-full gap-3 p-3 rounded-xl bg-nexus-surface border border-nexus-border'
+            }`}
         >
           <div className="relative shrink-0">
             <div
@@ -197,9 +191,8 @@ export default function AdminSidebar({
 
           {/* 文字信息 — 折叠时隐藏 */}
           <div
-            className={`flex flex-col text-left min-w-0 transition-all duration-300 ${
-              collapsed ? 'opacity-0 w-0 overflow-hidden flex-none' : 'opacity-100 w-auto flex-1'
-            }`}
+            className={`flex flex-col text-left min-w-0 transition-all duration-300 ${collapsed ? 'opacity-0 w-0 overflow-hidden flex-none' : 'opacity-100 w-auto flex-1'
+              }`}
           >
             <span className="text-sm font-medium text-nexus-text truncate">
               {displayName}

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { assetUrl } from '../../utils/asset-url';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ChevronRight,
@@ -119,9 +120,8 @@ export default function WorkbenchTopBar({
   return (
     <>
       <header
-        className={`fixed top-0 right-0 h-16 bg-nexus-surface/90 backdrop-blur-xl border-b border-nexus-border z-10 flex items-center justify-between px-6 transition-all duration-300 ease-in-out ${
-          sidebarCollapsed ? 'left-[72px]' : 'left-64'
-        }`}
+        className={`fixed top-0 right-0 h-16 bg-nexus-surface/90 backdrop-blur-xl border-b border-nexus-border z-10 flex items-center justify-between px-6 transition-all duration-300 ease-in-out ${sidebarCollapsed ? 'left-[72px]' : 'left-64'
+          }`}
       >
         {/* 面包屑 */}
         <div className="flex items-center text-sm">
@@ -141,57 +141,57 @@ export default function WorkbenchTopBar({
         <div className="flex items-center gap-3">
           {/* ======= 积分余额（仅用户可见，管理员隐藏） ======= */}
           {!isAdmin && (
-          <div className="relative" ref={creditsRef}>
-            <button
-              onClick={() => setShowCreditsMenu((v) => !v)}
-              className="cursor-target hidden md:flex items-center gap-2 bg-nexus-surface-alt border border-nexus-primary/30 px-3 py-1.5 rounded-lg text-sm font-medium text-nexus-primary shadow-[inset_0_0_10px_rgba(62,237,231,0.08)] hover:bg-nexus-primary/10 hover:border-nexus-primary/60 transition-all cursor-pointer min-w-[120px] justify-center"
-            >
-              <Zap
-                size={14}
-                className="text-nexus-primary fill-nexus-primary/20"
-              />
-              <span className="tracking-wider font-mono text-xs">
-                {credits.toLocaleString()} 积分
-              </span>
-            </button>
+            <div className="relative" ref={creditsRef}>
+              <button
+                onClick={() => setShowCreditsMenu((v) => !v)}
+                className="cursor-target hidden md:flex items-center gap-2 bg-nexus-surface-alt border border-nexus-primary/30 px-3 py-1.5 rounded-lg text-sm font-medium text-nexus-primary shadow-[inset_0_0_10px_rgba(62,237,231,0.08)] hover:bg-nexus-primary/10 hover:border-nexus-primary/60 transition-all cursor-pointer min-w-[120px] justify-center"
+              >
+                <Zap
+                  size={14}
+                  className="text-nexus-primary fill-nexus-primary/20"
+                />
+                <span className="tracking-wider font-mono text-xs">
+                  {credits.toLocaleString()} 积分
+                </span>
+              </button>
 
-            {/* 积分下拉菜单 */}
-            <AnimatePresence>
-              {showCreditsMenu && (
-                <motion.div
-                  initial={{ opacity: 0, y: -4, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -4, scale: 0.95 }}
-                  transition={{ duration: 0.15 }}
-                  className="absolute top-full right-0 mt-2 min-w-[140px] w-max bg-nexus-surface border border-nexus-border rounded-xl shadow-2xl shadow-black/40 overflow-hidden z-50"
-                >
-                  <button
-                    onMouseDown={(e) => {
-                      e.stopPropagation();
-                      setShowCreditsMenu(false);
-                      onNavigateToCredits?.();
-                    }}
-                    className="cursor-target w-full flex items-center gap-2 px-4 py-3 text-sm text-nexus-text hover:bg-nexus-primary/10 hover:text-nexus-primary transition-colors whitespace-nowrap"
+              {/* 积分下拉菜单 */}
+              <AnimatePresence>
+                {showCreditsMenu && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -4, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -4, scale: 0.95 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute top-full right-0 mt-2 min-w-[140px] w-max bg-nexus-surface border border-nexus-border rounded-xl shadow-2xl shadow-black/40 overflow-hidden z-50"
                   >
-                    <Coins size={14} className="shrink-0" />
-                    积分用量
-                  </button>
-                  <div className="h-px bg-nexus-border mx-2" />
-                  <button
-                    onMouseDown={(e) => {
-                      e.stopPropagation();
-                      setShowCreditsMenu(false);
-                      navigate('/recharge');
-                    }}
-                    className="cursor-target w-full flex items-center gap-2 px-4 py-3 text-sm text-nexus-text hover:bg-nexus-primary/10 hover:text-nexus-primary transition-colors whitespace-nowrap"
-                  >
-                    <Zap size={14} className="text-amber-400 shrink-0" />
-                    积分充值
-                  </button>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+                    <button
+                      onMouseDown={(e) => {
+                        e.stopPropagation();
+                        setShowCreditsMenu(false);
+                        onNavigateToCredits?.();
+                      }}
+                      className="cursor-target w-full flex items-center gap-2 px-4 py-3 text-sm text-nexus-text hover:bg-nexus-primary/10 hover:text-nexus-primary transition-colors whitespace-nowrap"
+                    >
+                      <Coins size={14} className="shrink-0" />
+                      积分用量
+                    </button>
+                    <div className="h-px bg-nexus-border mx-2" />
+                    <button
+                      onMouseDown={(e) => {
+                        e.stopPropagation();
+                        setShowCreditsMenu(false);
+                        navigate('/recharge');
+                      }}
+                      className="cursor-target w-full flex items-center gap-2 px-4 py-3 text-sm text-nexus-text hover:bg-nexus-primary/10 hover:text-nexus-primary transition-colors whitespace-nowrap"
+                    >
+                      <Zap size={14} className="text-amber-400 shrink-0" />
+                      积分充值
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           )}
 
           {/* 工具按钮组 */}
@@ -251,7 +251,7 @@ export default function WorkbenchTopBar({
                     </p>
                     <div className="bg-white rounded-lg p-2 flex items-center justify-center">
                       <img
-                        src="/kefu.jpg"
+                        src={assetUrl('/kefu.jpg')}
                         alt="客服微信二维码"
                         className="w-full h-auto rounded"
                       />

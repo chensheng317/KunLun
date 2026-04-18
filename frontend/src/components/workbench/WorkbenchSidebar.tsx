@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { assetUrl } from '../../utils/asset-url';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
@@ -65,20 +66,18 @@ export default function WorkbenchSidebar({
 
   return (
     <aside
-      className={`fixed inset-y-0 left-0 bg-nexus-bg border-r border-nexus-border flex flex-col z-20 transition-all duration-300 ease-in-out ${
-        collapsed ? 'w-[72px]' : 'w-64'
-      }`}
+      className={`fixed inset-y-0 left-0 bg-nexus-bg border-r border-nexus-border flex flex-col z-20 transition-all duration-300 ease-in-out ${collapsed ? 'w-[72px]' : 'w-64'
+        }`}
     >
       {/* Logo 区域 */}
       <div className="h-16 flex items-center px-4 border-b border-nexus-border">
         <Link to="/" className="flex items-center gap-3 group min-w-0">
           <div className="relative w-8 h-8 rounded-lg overflow-hidden shadow-cyber-glow group-hover:shadow-cyber-glow-hover transition-shadow duration-300 shrink-0">
-            <img src="/logo.png" alt="KunLun Logo" className="w-full h-full object-cover" />
+            <img src={assetUrl('/logo.png')} alt="KunLun Logo" className="w-full h-full object-cover" />
           </div>
           <span
-            className={`text-lg font-bold tracking-wide text-nexus-text whitespace-nowrap transition-all duration-300 ${
-              collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100 w-auto'
-            }`}
+            className={`text-lg font-bold tracking-wide text-nexus-text whitespace-nowrap transition-all duration-300 ${collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100 w-auto'
+              }`}
           >
             昆仑工坊
           </span>
@@ -90,9 +89,8 @@ export default function WorkbenchSidebar({
         {/* 核心中枢标题 + 折叠按钮 */}
         <div className="flex items-center justify-between px-2 mb-3">
           <span
-            className={`text-[11px] font-semibold text-nexus-muted uppercase tracking-widest whitespace-nowrap transition-all duration-300 ${
-              collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'
-            }`}
+            className={`text-[11px] font-semibold text-nexus-muted uppercase tracking-widest whitespace-nowrap transition-all duration-300 ${collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'
+              }`}
           >
             核心中枢
           </span>
@@ -112,13 +110,11 @@ export default function WorkbenchSidebar({
             <div key={item.id} className="relative group/nav">
               <button
                 onClick={() => setActiveTab(item.id)}
-                className={`relative w-full flex items-center ${
-                  collapsed ? 'justify-center px-0' : 'justify-between px-3'
-                } py-2.5 rounded-lg transition-all duration-200 text-sm font-medium cursor-target ${
-                  isActive
+                className={`relative w-full flex items-center ${collapsed ? 'justify-center px-0' : 'justify-between px-3'
+                  } py-2.5 rounded-lg transition-all duration-200 text-sm font-medium cursor-target ${isActive
                     ? 'text-nexus-primary bg-nexus-surface border border-nexus-primary/20 shadow-[inset_0_0_15px_rgba(62,237,231,0.08)]'
                     : 'text-nexus-muted hover:text-nexus-text hover:bg-nexus-surface/50 border border-transparent'
-                }`}
+                  }`}
               >
                 {/* 激活指示条 */}
                 {isActive && (
@@ -136,9 +132,8 @@ export default function WorkbenchSidebar({
                     className={`shrink-0 ${isActive ? 'text-nexus-primary drop-shadow-[0_0_5px_rgba(62,237,231,0.5)]' : ''}`}
                   />
                   <span
-                    className={`whitespace-nowrap transition-all duration-300 ${
-                      collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100 w-auto'
-                    }`}
+                    className={`whitespace-nowrap transition-all duration-300 ${collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100 w-auto'
+                      }`}
                   >
                     {item.label}
                   </span>
@@ -147,13 +142,12 @@ export default function WorkbenchSidebar({
                 {/* Badge — 折叠时隐藏 */}
                 {item.badge && !collapsed && (
                   <span
-                    className={`text-[10px] px-1.5 py-0.5 rounded font-bold relative z-10 ${
-                      item.badge === 'PRO'
-                        ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
-                        : item.badge === 'BETA'
+                    className={`text-[10px] px-1.5 py-0.5 rounded font-bold relative z-10 ${item.badge === 'PRO'
+                      ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
+                      : item.badge === 'BETA'
                         ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
                         : 'bg-nexus-secondary/20 text-nexus-secondary border border-nexus-secondary/30'
-                    }`}
+                      }`}
                   >
                     {item.badge}
                   </span>
@@ -165,9 +159,8 @@ export default function WorkbenchSidebar({
                 <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2.5 py-1.5 rounded-lg bg-nexus-surface border border-nexus-border text-xs font-medium text-nexus-text whitespace-nowrap opacity-0 group-hover/nav:opacity-100 pointer-events-none transition-opacity duration-200 z-50 shadow-lg">
                   {item.label}
                   {item.badge && (
-                    <span className={`ml-2 text-[10px] px-1 py-0.5 rounded font-bold ${
-                      item.badge === 'PRO' ? 'text-amber-400' : item.badge === 'BETA' ? 'text-purple-400' : 'text-nexus-secondary'
-                    }`}>
+                    <span className={`ml-2 text-[10px] px-1 py-0.5 rounded font-bold ${item.badge === 'PRO' ? 'text-amber-400' : item.badge === 'BETA' ? 'text-purple-400' : 'text-nexus-secondary'
+                      }`}>
                       {item.badge}
                     </span>
                   )}
@@ -182,19 +175,17 @@ export default function WorkbenchSidebar({
       <div className={`border-t border-nexus-border transition-all duration-300 ${collapsed ? 'py-3' : 'p-3'}`}>
         <button
           onClick={onUserClick}
-          className={`flex items-center transition-all duration-300 group/user relative cursor-target ${
-            collapsed
-              ? 'w-full justify-center py-2'
-              : 'w-full gap-3 p-3 rounded-xl bg-nexus-surface border border-nexus-border hover:border-nexus-primary/50 hover:shadow-cyber-glow'
-          }`}
+          className={`flex items-center transition-all duration-300 group/user relative cursor-target ${collapsed
+            ? 'w-full justify-center py-2'
+            : 'w-full gap-3 p-3 rounded-xl bg-nexus-surface border border-nexus-border hover:border-nexus-primary/50 hover:shadow-cyber-glow'
+            }`}
         >
           <div className="relative shrink-0">
             <div
-              className={`w-9 h-9 rounded-lg border flex items-center justify-center bg-nexus-primary/20 text-nexus-primary font-bold text-sm transition-colors ${
-                collapsed
-                  ? 'border-nexus-border group-hover/user:border-nexus-primary group-hover/user:shadow-cyber-glow'
-                  : 'border-nexus-border group-hover/user:border-nexus-primary'
-              }`}
+              className={`w-9 h-9 rounded-lg border flex items-center justify-center bg-nexus-primary/20 text-nexus-primary font-bold text-sm transition-colors ${collapsed
+                ? 'border-nexus-border group-hover/user:border-nexus-primary group-hover/user:shadow-cyber-glow'
+                : 'border-nexus-border group-hover/user:border-nexus-primary'
+                }`}
             >
               {displayName.charAt(0).toUpperCase()}
             </div>
@@ -203,9 +194,8 @@ export default function WorkbenchSidebar({
 
           {/* 文字信息 — 折叠时隐藏 */}
           <div
-            className={`flex flex-col text-left min-w-0 transition-all duration-300 ${
-              collapsed ? 'opacity-0 w-0 overflow-hidden flex-none' : 'opacity-100 w-auto flex-1'
-            }`}
+            className={`flex flex-col text-left min-w-0 transition-all duration-300 ${collapsed ? 'opacity-0 w-0 overflow-hidden flex-none' : 'opacity-100 w-auto flex-1'
+              }`}
           >
             <span className="text-sm font-medium text-nexus-text group-hover/user:text-nexus-primary transition-colors truncate">
               {displayName}

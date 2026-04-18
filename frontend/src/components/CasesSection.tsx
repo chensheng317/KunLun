@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { assetUrl } from '../utils/asset-url';
 
 
 interface CaseStory {
@@ -34,12 +35,12 @@ export default function CasesSection() {
   }, []);
 
   const stories: CaseStory[] = [
-    { title: '高效', metric: 'Efficient', image: '/stream/1.jpg' },
-    { title: '智能', metric: 'Intelligent', image: '/stream/2.jpg' },
-    { title: '创新', metric: 'Innovative', image: '/stream/3.jpg' },
-    { title: '精准', metric: 'Precise', image: '/stream/4.jpg' },
-    { title: '卓越', metric: 'Excellent', image: '/stream/5.jpg' },
-    { title: '极致', metric: 'Ultimate', image: '/stream/6.jpg' },
+    { title: '高效', metric: 'Efficient', image: assetUrl('/stream/1.jpg') },
+    { title: '智能', metric: 'Intelligent', image: assetUrl('/stream/2.jpg') },
+    { title: '创新', metric: 'Innovative', image: assetUrl('/stream/3.jpg') },
+    { title: '精准', metric: 'Precise', image: assetUrl('/stream/4.jpg') },
+    { title: '卓越', metric: 'Excellent', image: assetUrl('/stream/5.jpg') },
+    { title: '极致', metric: 'Ultimate', image: assetUrl('/stream/6.jpg') },
   ];
 
   return (

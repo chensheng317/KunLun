@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { assetUrl } from '../utils/asset-url';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { UserPlus, Eye, EyeOff, AlertCircle, ArrowLeft, Check, ShieldAlert, Home } from 'lucide-react';
@@ -97,7 +98,7 @@ export default function RegisterPage() {
           <div className="text-center mb-8">
             <div className="w-14 h-14 rounded-2xl mx-auto mb-4 overflow-hidden shadow-cyber-glow">
               <img
-                src="/logo.png"
+                src={assetUrl('/logo.png')}
                 alt="KunLun Logo"
                 className="w-full h-full object-cover"
               />
@@ -168,8 +169,8 @@ export default function RegisterPage() {
                       <div
                         key={level}
                         className={`h-1 flex-1 rounded-full transition-colors ${level <= passwordStrength.level
-                            ? passwordStrength.color
-                            : 'bg-nexus-border'
+                          ? passwordStrength.color
+                          : 'bg-nexus-border'
                           }`}
                       />
                     ))}
@@ -192,10 +193,10 @@ export default function RegisterPage() {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="再次输入密码"
                   className={`w-full bg-nexus-bg border rounded-xl px-4 py-3 pr-11 text-sm text-nexus-text placeholder-nexus-muted/50 focus:outline-none transition-all ${confirmPassword && confirmPassword === password
-                      ? 'border-emerald-500/50 focus:shadow-[0_0_0_3px_rgba(16,185,129,0.1)]'
-                      : confirmPassword && confirmPassword !== password
-                        ? 'border-rose-500/50 focus:shadow-[0_0_0_3px_rgba(244,63,94,0.1)]'
-                        : 'border-nexus-border focus:border-nexus-primary/50 focus:shadow-[0_0_0_3px_rgba(62,237,231,0.1)]'
+                    ? 'border-emerald-500/50 focus:shadow-[0_0_0_3px_rgba(16,185,129,0.1)]'
+                    : confirmPassword && confirmPassword !== password
+                      ? 'border-rose-500/50 focus:shadow-[0_0_0_3px_rgba(244,63,94,0.1)]'
+                      : 'border-nexus-border focus:border-nexus-primary/50 focus:shadow-[0_0_0_3px_rgba(62,237,231,0.1)]'
                     }`}
                   autoComplete="new-password"
                 />

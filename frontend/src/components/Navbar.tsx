@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { assetUrl } from '../utils/asset-url';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Zap, Menu, X, LogIn, UserPlus } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
@@ -53,8 +54,8 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     <nav
       id="navbar"
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
-          ? 'bg-nexus-bg/80 backdrop-blur-xl border-b border-nexus-border/50 shadow-lg shadow-black/20'
-          : 'bg-transparent'
+        ? 'bg-nexus-bg/80 backdrop-blur-xl border-b border-nexus-border/50 shadow-lg shadow-black/20'
+        : 'bg-transparent'
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -64,7 +65,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
           onClick={() => handleNavClick('home')}
         >
           <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-cyber-glow group-hover:shadow-cyber-glow-hover transition-shadow duration-300">
-            <img src="/logo.png" alt="KunLun Logo" className="w-full h-full object-cover" />
+            <img src={assetUrl('/logo.png')} alt="KunLun Logo" className="w-full h-full object-cover" />
           </div>
           <span className="font-bold text-xl tracking-wider text-nexus-text">
             KUNLUN{' '}

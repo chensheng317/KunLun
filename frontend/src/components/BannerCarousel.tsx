@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { assetUrl } from '../utils/asset-url';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import ShinyText from './react-bits/ShinyText';
 
@@ -77,7 +78,7 @@ export default function BannerCarousel() {
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
-        src="/banner视频.mp4"
+        src={assetUrl('/banner视频.mp4')}
       />
 
       {/* NOTE: 视频叠加层 — 使用 CSS 类实现主题感知，浅色模式不会出现白雾 */}
@@ -96,13 +97,12 @@ export default function BannerCarousel() {
           {slides.map((slide, i) => (
             <div
               key={slide.id}
-              className={`absolute inset-0 flex items-center transition-all duration-700 ${
-                i === currentSlide
+              className={`absolute inset-0 flex items-center transition-all duration-700 ${i === currentSlide
                   ? 'opacity-100 translate-y-0 z-10'
                   : i < currentSlide
-                  ? 'opacity-0 -translate-y-12 z-0'
-                  : 'opacity-0 translate-y-12 z-0'
-              }`}
+                    ? 'opacity-0 -translate-y-12 z-0'
+                    : 'opacity-0 translate-y-12 z-0'
+                }`}
             >
               <div className="max-w-7xl mx-auto w-full px-6 md:px-16">
                 <div className="max-w-2xl">

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { assetUrl } from '../../utils/asset-url';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -308,11 +309,10 @@ export default function UserSettingsModal({
                         <button
                           key={lang.code}
                           onClick={() => setCurrentLanguage(lang.code)}
-                          className={`cursor-target w-full flex items-center justify-between px-3 py-2.5 rounded-lg transition-all ${
-                            currentLanguage === lang.code
+                          className={`cursor-target w-full flex items-center justify-between px-3 py-2.5 rounded-lg transition-all ${currentLanguage === lang.code
                               ? 'bg-nexus-primary/10 border border-nexus-primary/30 text-nexus-primary'
                               : 'text-nexus-text hover:bg-nexus-bg border border-transparent'
-                          }`}
+                            }`}
                         >
                           <div className="flex items-center gap-3">
                             <span className="text-base">{lang.flag}</span>
@@ -352,11 +352,10 @@ export default function UserSettingsModal({
                           <button
                             key={theme.id}
                             onClick={() => setThemeMode(theme.id)}
-                            className={`cursor-target w-full flex items-center justify-between px-3 py-3 rounded-lg transition-all ${
-                              currentTheme === theme.id
+                            className={`cursor-target w-full flex items-center justify-between px-3 py-3 rounded-lg transition-all ${currentTheme === theme.id
                                 ? 'bg-nexus-primary/10 border border-nexus-primary/30 text-nexus-primary'
                                 : 'text-nexus-text hover:bg-nexus-bg border border-transparent'
-                            }`}
+                              }`}
                           >
                             <div className="flex items-center gap-3">
                               <Icon size={17} />
@@ -401,7 +400,7 @@ export default function UserSettingsModal({
                       </p>
                       <div className="bg-white rounded-lg p-2 w-48">
                         <img
-                          src="/kefu.jpg"
+                          src={assetUrl('/kefu.jpg')}
                           alt="客服微信二维码"
                           className="w-full h-auto rounded"
                         />

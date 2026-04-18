@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { assetUrl } from '../utils/asset-url';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { LogIn, Eye, EyeOff, AlertCircle, ArrowLeft } from 'lucide-react';
@@ -75,7 +76,7 @@ export default function LoginPage() {
           <div className="text-center mb-8">
             <div className="w-14 h-14 rounded-2xl mx-auto mb-4 overflow-hidden shadow-cyber-glow">
               <img
-                src="/logo.png"
+                src={assetUrl('/logo.png')}
                 alt="KunLun Logo"
                 className="w-full h-full object-cover"
               />
